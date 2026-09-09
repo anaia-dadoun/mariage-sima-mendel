@@ -1412,7 +1412,6 @@ footer div:last-child{
     padding:35px 15px;
   }
 }
-
 .confirm{
   display:none;
   margin-top:20px;
@@ -2258,7 +2257,9 @@ fieldset legend{
   margin:0;
   text-align:left !important;
 }
-  .top-menu{
+
+
+.top-menu{
   position:fixed;
   top:0;
   left:0;
@@ -2310,6 +2311,7 @@ fieldset legend{
     font-size:14px;
   }
 }
+
 /* =========================
    RESPONSIVE MOBILE
 ========================= */
@@ -2490,8 +2492,89 @@ fieldset legend{
   }
 
 }
-  
+
+@media (max-width: 700px){
+
+  .rsvp{
+    padding:25px 12px;
+  }
+
+  .rsvp .invitation{
+    width:100%;
+    max-width:100%;
+    padding:45px 18px;
+  }
+
+  .rsvp .mairie-title{
+    font-size:36px;
+  }
+
+  .two{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .field{
+    width:100%;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select{
+    width:100%;
+    font-size:16px;
+  }
+
+  fieldset{
+    width:100%;
+  }
+
+  fieldset legend{
+    width:100%;
+    text-align:left;
+  }
+
+  .radio-row{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .events-options{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .event-choice{
+    width:100%;
+  }
+
+  .event-choice span{
+    width:100%;
+    padding:12px 8px;
+    text-align:center;
+  }
+
+  textarea{
+    min-height:100px;
+  }
+
+  .primary-btn{
+    width:100%;
+    font-size:13px;
+    letter-spacing:.1em;
+    padding:14px 10px;
+  }
+}
 </style>
+
 </head>
 <div id="player" style="display:none;"></div>
 
@@ -2509,7 +2592,7 @@ fieldset legend{
 </script>
 <body>
 <nav class="top-menu">
-  <a href="#accueil">Accueil</a>
+    <a href="#accueil">Accueil</a>
   <a href="#mairie">Mairie</a>
   <a href="#invitation">Houppa</a>
   <a href="#rsvp">Rvsp</a>
@@ -2608,8 +2691,7 @@ fieldset legend{
     <img src="rose-blanche.png" class="rose-img rose-img-top" alt="">
 <img src="rose-blanche.png" class="rose-img rose-img-bottom" alt="">
     <div class="small-hebrew">בס״ד</div>
-    <div class="invite-kicker">Avec une immense joie</div>
-
+<svg _ngcontent-ng-c1983100379="" viewBox="0 0 380 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kol sasson vekol simha, kol hatan vekol kala" class="hebrew-arc-svg"><defs _ngcontent-ng-c1983100379=""><path _ngcontent-ng-c1983100379="" id="hebrewArcHouppa" d="M 14 52 Q 190 6 366 52"></path></defs><text _ngcontent-ng-c1983100379="" direction="rtl" xml:lang="he" class="hebrew-arc-text"><textPath _ngcontent-ng-c1983100379="" href="#hebrewArcHouppa" startOffset="50%" text-anchor="middle">קול ששון וקול שמחה, קול חתן וקול כלה</textPath></text></svg>
     <div class="parents">
         <div>M et Mme Jacob et <br>Nelly Sabbah</div>
       <div>&</div>
@@ -2681,8 +2763,7 @@ Que leur mérite nous protège B"H    </p>
 
 <section class="rsvp" id="rsvp">
   <div class="invitation">
-    <h2 class="mairie-title">Confirmation</h2>
-    <p class="section-sub">Merci de nous répondre avant le 1er mai 2027.</p>
+    <h1 class="mairie-title">Confirmation</h1>
 
     <form id="rsvp-form">
       <div class="two">
@@ -2707,9 +2788,9 @@ Que leur mérite nous protège B"H    </p>
         </div>
       </div><br><br>
 
-      <fieldset>
+      <fieldset class="events-fieldset">
         <legend>Présence</legend>
-        <div>
+        <div class="radio-row">
           <label><input type="radio" name="presence" value="oui" required> Oui, avec joie</label>
           <label><input type="radio" name="presence" value="non"> Je ne pourrai pas venir</label>
         </div>
@@ -2735,8 +2816,8 @@ Que leur mérite nous protège B"H    </p>
   </div>
 </fieldset>
 
-      <div class="field"><br><br>
-        <label for="message">Un mot pour les mariés</label>
+      <div class="events-fieldset"><br><br>
+        <legend for="message">Un mot pour les mariés</legend>
         <textarea id="message" rows="4" placeholder="Écrivez votre message ici..."></textarea>
       </div>
 
@@ -2856,11 +2937,11 @@ function addPhotos(files){
 <audio id="musique" loop>
   <source src="musique.mp3" type="audio/mpeg">
 </audio>
+
 <script>
 if (window.location.hash) {
   history.replaceState(null, "", window.location.pathname);
 }
 </script>
-
 </body>
 </html>
