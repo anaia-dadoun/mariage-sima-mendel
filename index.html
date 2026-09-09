@@ -1296,6 +1296,187 @@ fieldset legend{
     font-size:14px;
   }
 }
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* MENU DU HAUT */
+  .top-menu{
+    gap:12px;
+    padding:12px 8px;
+    flex-wrap:wrap;
+  }
+
+  .top-menu a{
+    font-size:13px;
+  }
+
+
+  /* PAGE D'ACCUEIL */
+  .intro{
+    min-height:100svh;
+    padding:80px 18px 35px;
+  }
+
+  .intro-inner{
+    width:100%;
+  }
+
+  .names{
+    font-size:3.5rem;
+    line-height:1;
+  }
+
+  .date{
+    font-size:.95rem;
+  }
+
+  .countdown{
+    width:100%;
+    gap:0;
+  }
+
+  .count-num{
+    font-size:1.5rem;
+  }
+
+  .count-label{
+    font-size:.5rem;
+  }
+
+
+  /* MAIRIE */
+  .mairie-wrap{
+    padding:30px 12px;
+  }
+
+  .mairie-card{
+    width:100%;
+    min-height:auto;
+    padding:55px 22px;
+  }
+
+  .mairie-title{
+    font-size:38px;
+  }
+
+  .mairie-text{
+    font-size:15px;
+  }
+
+  .mairie-names{
+    gap:12px;
+  }
+
+  .mairie-names span{
+    font-size:38px;
+  }
+
+  .mairie-location{
+    font-size:14px;
+  }
+
+
+  /* HOUPPA */
+  .invitation-wrap{
+    padding:30px 12px;
+  }
+
+  .invitation{
+    width:100%;
+    padding:55px 22px;
+  }
+
+  .parents{
+    grid-template-columns:1fr auto 1fr;
+    gap:8px;
+    font-size:14px;
+  }
+
+  .parents div:first-child{
+    text-align:left;
+  }
+
+  .parents div:last-child{
+    text-align:right;
+  }
+
+  .invite-copy{
+    font-size:15px;
+  }
+
+  .couple-names{
+    gap:12px;
+  }
+
+  .latin-name{
+    font-size:40px;
+  }
+
+  .hebrew-name{
+    font-size:16px;
+  }
+
+  .and{
+    font-size:22px;
+  }
+
+
+  /* BOUTONS WAZE / MAPS */
+  .gps-buttons{
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+  }
+
+  .gps-btn{
+    width:100%;
+    max-width:280px;
+    text-align:center;
+  }
+
+
+  /* FORMULAIRE */
+  .rsvp{
+    padding:45px 12px;
+  }
+
+  .two{
+    grid-template-columns:1fr;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select{
+    font-size:16px;
+  }
+
+  .events-options{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .radio-row{
+    flex-direction:column;
+    gap:10px;
+  }
+
+
+  /* ROSES */
+  .rose-img{
+    width:85px;
+    opacity:.4;
+  }
+
+}
+  
 </style>
 </head>
 <div id="player" style="display:none;"></div>
