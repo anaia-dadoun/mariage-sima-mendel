@@ -1314,11 +1314,12 @@ fieldset legend{
 </script>
 <body>
 <nav class="top-menu">
+  <a href="#accueil">Accueil</a>
   <a href="#mairie">Mairie</a>
   <a href="#invitation">Houppa</a>
   <a href="#rsvp">Rvsp</a>
 </nav>
-<section class="intro">
+<section class="intro" id="accueil">
   <div class="intro-inner">
     <div class="bsad">בס״ד</div>
 
@@ -1660,7 +1661,15 @@ function addPhotos(files){
 <audio id="musique" loop>
   <source src="musique.mp3" type="audio/mpeg">
 </audio>
+<script>
+window.addEventListener("load", function () {
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname);
+  }
 
+  window.scrollTo(0, 0);
+});
+</script>
 
 </body>
 </html>
