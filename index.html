@@ -1662,13 +1662,9 @@ function addPhotos(files){
   <source src="musique.mp3" type="audio/mpeg">
 </audio>
 <script>
-window.addEventListener("load", function () {
-  if (window.location.hash) {
-    history.replaceState(null, "", window.location.pathname);
-  }
-
-  window.scrollTo(0, 0);
-});
+if (window.location.hash) {
+  history.replaceState(null, "", window.location.pathname);
+}
 </script>
 
 </body>
